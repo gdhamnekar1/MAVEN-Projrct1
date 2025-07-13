@@ -24,14 +24,74 @@ linux-ubunto
 #Build Maven project 
   -mvn package 
 
-# maven LifeCycle phases
 
 
+    1  
+    2  apt install maven -y
+    3  java -v
+    4  maven -version
+    5  mvn -version
+    6  -
+    7  mvn --version
+    8  mvn archetype:generate   -DgroupId=com.mywebvido.app   -DartifactId=my-app   -DarchetypeArtifactId=maven-archetype-quickstart   -DarchetypeVersion=1.4   -DinteractiveMode=false
+    9  ls
+   10  cd ,,
+   11  cd ..
+   12  apt install tree -y
+   13  tree my-app/
+   14  vi my-app/src/main/java/com/mywebvido/app/App.java
+   15  vi my-app/src/test/java/com/mywebvido/app/AppTest.java
+   16  vim my-app/pom.xml
+   17  cd my-app/
+   18  mvn validate
+   19  ls
+   20  cd my-app/
+   21  mvn compile
+   22  mvn clean install
+   23  mvn compile
+   24  sudo mvn compile
+   25  apt update
+   26  mvn compile
+   27  ls
+   28  cd
+   29  mvn compile
+   30  ls
+   31  cd ..
+   32  ls
+   33  cd home/vinod/
+   34  ls
+   35  tree -my-app
+   36  tree my-app1
+   37  ls
+   38  cd my-app/
+   39  ls
+   40  vi pom.xml
+   41  namo pom.xml
+   42  vi pom.xml
+   43  mvn clean compile
+   44  vi pom.xml
+   45  mvn compile
+   46  mvn test
+   47  cd
+   48  cd home
+   49  ls
+   50  cd /home/vinod/
+   51  ls
+   52  tree my-app/
+   53  cd my-app/
+   54  mvn package
+   55  java -cp /home/vinod/my-app/target/my-app-1.0-SNAPSHOT.jar
+   56  java -cp /home/vinod/my-app/target/my-app-1.0-SNAPSHOT.jar com.mywebvindo.app.App
+   57  ls
+   58  cat pom.xml
+   59  java -cp /home/vinod/my-app/target/my-app-1.0-SNAPSHOT.jar com.mywebvido.app.App
+   60  mvn clean
+   61  clear
+   62  cd ..
+   63  tree my-app/
+   64  history
+   65  cd my-app/
+   66  mvn clean package
+   67  java -cp /home/vinod/my-app/target/my-app-1.0-SNAPSHOT.jar com.mywebvido.app.App
+   68  history
 
-#validate:
--mvn validate #validate the project is correct and all necessary information is available
-
-#Compile:
-  -compile the source code of the project
-
-#Test
