@@ -1,0 +1,69 @@
+Maven's **build lifecycle** is a sequence of **phases** that define the steps in building and deploying a project. There are **three built-in lifecycles**, but the most commonly used is the **default lifecycle**, which handles your project's build.
+
+---
+
+### 🔵 Maven Default Lifecycle Phases (Most Used)
+
+| Phase        | Description                                                                  |
+| ------------ | ---------------------------------------------------------------------------- |
+| **validate** | Checks if the project structure is correct and all information is available. |
+| **compile**  | Compiles the source code of the project.                                     |
+| **test**     | Runs unit tests (does **not** require the code to be packaged).              |
+| **package**  | Packages the compiled code into a JAR/WAR file.                              |
+| **verify**   | Runs any checks to verify the package is valid and meets quality criteria.   |
+| **install**  | Installs the package into the local Maven repository (`~/.m2/repository`).   |
+| **deploy**   | Deploys the package to a remote repository for sharing with others.          |
+
+---
+
+### 🔸 Example Usage:
+
+```bash
+mvn clean install
+```
+
+This will run:
+
+* `clean` → from the **clean lifecycle** (wipes `target/`)
+* all default lifecycle phases up to `install`: `validate → compile → test → package → verify → install`
+
+---
+
+### 🔴 Other Lifecycles
+
+#### 1. **Clean Lifecycle** (cleans up previous builds)
+
+| Phase      | Description                  |
+| ---------- | ---------------------------- |
+| pre-clean  | Do stuff before cleaning.    |
+| clean      | Deletes `target/` directory. |
+| post-clean | Do stuff after cleaning.     |
+
+```bash
+mvn clean
+```
+
+#### 2. **Site Lifecycle** (generates documentation)
+
+| Phase       | Description                        |
+| ----------- | ---------------------------------- |
+| pre-site    | Do stuff before site generation.   |
+| site        | Generates the project's site docs. |
+| post-site   | Do stuff after site generation.    |
+| site-deploy | Deploys the generated site.        |
+
+```bash
+mvn site
+```
+
+---
+
+### ✅ Summary Diagram
+
+```text
+validate → compile → test → package → verify → install → deploy
+```
+
+---
+
+Let me know if you want a diagram or a cheat sheet!
