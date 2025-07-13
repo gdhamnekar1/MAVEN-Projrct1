@@ -1,0 +1,37 @@
+linux-ubunto
+
+  -sudo apt update
+-sudo apt install default-jdk
+  -java -verstion
+  -sudo apt install maven
+-mvn --verstion
+  -sudo apt install tree -y 
+
+  Maven Commands:
+#java skeleton Project Creations:
+-mvn archetype:generate \
+  -DgroupId=com.example.app \
+  -DartifactId=my-app \
+  -DarchetypeArtifactId=maven-archetype-quickstart \
+  -DarchetypeVersion=1.4 \
+  -DinteractiveMode=false
+  
+
+-ls # check whither my-app folder is created or not
+  -tree my-app/
+ 
+  
+#Build Maven project 
+  -mvn package 
+
+# maven LifeCycle phases
+
+
+
+#validate:
+-mvn validate #validate the project is correct and all necessary information is available
+
+#Compile:
+  -compile the source code of the project
+
+#Test
